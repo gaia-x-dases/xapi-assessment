@@ -1,0 +1,147 @@
+{
+    "id": "http://schema.dases.eu/xapi/profile/assessment",
+    "@context": "https://w3id.org/xapi/profiles/context",
+    "type": "Profile",
+    "conformsTo": "https://w3id.org/xapi/profiles#1.0",
+    "prefLabel": {
+        "en": "Assessment"
+    },
+    "definition": {
+        "en": "Statements related to assessment activity on e-learning."
+    },
+    "seeAlso": "",
+    "versions": [
+        {
+            "id": "http://schema.dases.eu/xapi/profile/assessment/v/1",
+            "generatedAtTime": "2023-01-10T20:28:48.429Z"
+        }
+    ],
+    "author": {
+        "type": "Organization",
+        "name": "Gaia-X Data Space for Education and Skills (DASES)",
+        "url": "https://www.dases.eu"
+    },
+    "templates": [
+        {
+            "id": "http://schema.dases.eu/xapi/profile/assessment/templates/started",
+            "type": "StatementTemplate",
+            "inScheme": "http://schema.dases.eu/xapi/profile/assessment/v/1",
+            "prefLabel": {
+                "en": "started"
+            },
+            "definition": {
+                "en": "The user has started an assessment. \nSuch statement can be generated on several contexts. The assessment is manually launched by the user and can be time limited. The assessment is directly available on the current page and it starts when the user chose or submitted a response for the first answer. "
+            },
+            "verb": "http://activitystrea.ms/start",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/assessment/templates/terminated",
+            "type": "StatementTemplate",
+            "inScheme": "http://schema.dases.eu/xapi/profile/assessment/v/1",
+            "prefLabel": {
+                "en": "terminated"
+            },
+            "definition": {
+                "en": "A moderator has terminated an assessment."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/terminated",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.timestamp",
+                    "presence": "recommended"
+                }
+            ]
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/assessment/templates/answered-question",
+            "type": "StatementTemplate",
+            "inScheme": "http://schema.dases.eu/xapi/profile/assessment/v/1",
+            "prefLabel": {
+                "en": "answered a question"
+            },
+            "definition": {
+                "en": "The user answered a question in the assessment."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/answered",
+            "contextParentActivityType": [
+                "http://adlnet.gov/expapi/activities/assessment"
+            ],
+            "rules": [
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.score.max",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.min",
+                    "presence": "included"
+                },
+                {
+                    "location": "$.result.success",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.response",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.result.score.scaled",
+                    "presence": "recommended"
+                },
+                {
+                    "location": "$.object.definition.interactionType",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/assessment/templates/initialized",
+            "type": "StatementTemplate",
+            "inScheme": "http://schema.dases.eu/xapi/profile/assessment/v/1",
+            "prefLabel": {
+                "en": "initialized"
+            },
+            "definition": {
+                "en": "A moderator has initialized an assessment."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/initialized",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                }
+            ]
+        },
+        {
+            "id": "http://schema.dases.eu/xapi/profile/assessment/templates/completed",
+            "type": "StatementTemplate",
+            "inScheme": "http://schema.dases.eu/xapi/profile/assessment/v/1",
+            "prefLabel": {
+                "en": "completed"
+            },
+            "definition": {
+                "en": "The user has successfully completed its assessment. The user has answered all the questions necessary for an evaluation. The assessment is sent to evaluation or has been evaluated but the user can no longer attempt the assessment until being allowed by the assessment administrator."
+            },
+            "verb": "http://adlnet.gov/expapi/verbs/completed",
+            "objectActivityType": "http://adlnet.gov/expapi/activities/assessment",
+            "rules": [
+                {
+                    "location": "$.timestamp",
+                    "presence": "included"
+                }
+            ]
+        }
+    ]
+}

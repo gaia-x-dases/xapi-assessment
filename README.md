@@ -4,6 +4,25 @@ This documentation intends to describe assessment profile defined by the Gaia-X 
 
 ## Statements
 
+### Completion
+
+All these statements are **MANDATORY** in ordre to comply with this profile.
+
+- [Initialized](./statements/mandatory/initialized.md)
+- [Terminated](./statements/mandatory/terminated.md)
+- [Started](./statements/mandatory/started.md)
+- [Completed](./statements/mandatory/completed.md)
+- [Answered a question](./statements/mandatory/answered-question.md)
+
+### Detailed completion actions
+
+All these statements are **HIGHLY RECOMMENDED**.
+
+### Other actions
+
+All these statements are **OPTIONAL**.
+
+
 ## Contributors
 
 | Github user  | Name            | Company/Institution         |
