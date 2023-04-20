@@ -4,6 +4,16 @@ This documentation intends to describe assessment profile defined by the Gaia-X 
 
 ## Statements
 
+### Main interactions
+
+These statements are helpful to get to know what happened in detail during the assessment.
+In an analytics perspective, it gives information on how student behave to fulfill (or aband) the assessment and give pedagogical feedback about it to improve the assessment.
+
+All these statements are **HIGHLY RECOMMENDED**.
+
+- [Answered question](./statements/recommended/answered-question.md)
+<!-- - [Shew answer](./statements/recommended/shew-answer.md) -->
+
 ## Contributors
 
 | Github user  | Name            | Company/Institution         |
