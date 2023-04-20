@@ -31,7 +31,7 @@ These statements are helpful to get to know what happened in detail during the a
 All these statements are **HIGHLY RECOMMENDED**.
 
 - [Shew answer](/statements/optional/shew-answer.md)
-- 
+- [Answered question](./statements/recommended/answered-question.md)
 
 ### Other interactions
 
